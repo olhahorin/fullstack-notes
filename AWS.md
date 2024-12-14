@@ -11,7 +11,14 @@ DNS сервер
 Дозволяє деплоїти і менеджети Docker контейнери. Також застосовується з тулзою Fagrante
 
 ## Amazon RDS (Relational Database system)
-Сервіс для реляційних баз даних
-Підтримує MySQL, SQL Server, Oracle, PostgreSQL and MariaDB.
+Сервіс для реляційних баз даних.  
+Підтримує MySQL, SQL Server, Oracle, PostgreSQL and MariaDB.  
+Multi-AZ.
 
 ## VPC Virtual Private Cloud
+
+## DynamoDB
+Документо-орієнтована база даних.
+Має таблиці що є колекцією `items`, а айтеми в свою чергу є колекцією `attributes`.
+Кожен айтем повинен мати `primary key`. Це може бути одне поле `partition key` або комбінація двої полів `partition key` + `sort key`.
+З CAP теореми DynamoDB вибирає Avilability i Partition Tolerance

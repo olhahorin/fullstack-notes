@@ -13,13 +13,13 @@ function liveDangerously(x?: number | null) {
 
 
 ## Narrowing
-Допустимо ми маємо змінну обєкт з опціональними полями або ж змінну з union типом (або ж змінну з типом unknown??).  
+Допустимо ми маємо змінну об'єкт з опціональними полями або ж змінну з union типом (або ж змінну з типом unknown??).  
 Як знати що можна викликати якийсь метод, використати поле цієї змінної?  
 Тайпскріпт трекає банальні перевірки JS і вже не видає помилки коли бачить що така перевірка є. Ці перевірки називаються guards.
 Guards можуть бути:
 * typeof: `if (typeof x === 'string') x.toLowerCase()`
 * is true - щоб відсіяти null i undefined
-* == === != !== : ```function example(x: string | number, y: string | boolean) {
+* == === != !== : ``` function example(x: string | number, y: string | boolean) {
   if (x === y) {
     // We can now call any 'string' method on 'x' or 'y'.
     x.toUpperCase();```
